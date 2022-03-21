@@ -20,7 +20,8 @@ class Jewel:
         self.file_reader = file_reader
 
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server.bind(("0.0.0.0", port))
+        ip = socket.gethostname()
+        server.bind((ip, port))
 
 
         server.listen(5)
@@ -116,4 +117,4 @@ if __name__ == "__main__":
 
     FR = FileReader()
 
-    J = Jewel(port, file_path, FR)
+    J = Jewel(8000, './', FR)
