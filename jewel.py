@@ -63,15 +63,15 @@ class Jewel:
                         if exists(requested_object):
                             filetype = requested_object.split('.')[1]
                             mime = ''
-                            if filetype is 'html':
+                            if filetype == 'html':
                                 mime = 'text/html'
-                            if filetype is 'css':
+                            if filetype == 'css':
                                 mime = 'text/css'
-                            if filetype is 'png':
+                            if filetype == 'png':
                                 mime = 'image/png'
-                            if filetype is 'jpg':
+                            if filetype == 'jpg':
                                 mime = 'image/jpg'
-                            if filetype is 'gif':
+                            if filetype == 'gif':
                                 mime = 'image/gif'
                             length = str(os.path.getsize(requested_object))
                             response = 'HTTP/1.0 200 OK\nCotent-Length: ' + length + '\nContent-Type: ' + mime + '\n\n'
