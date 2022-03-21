@@ -1,1 +1,1 @@
-web: gunicorn cn3ary-ECE4457-EC1
+web: gunicorn jewel.wsgi
