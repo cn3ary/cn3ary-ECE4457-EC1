@@ -112,9 +112,6 @@ class Jewel:
         server.close()
 
 if __name__ == "__main__":
-    port = int(sys.argv[1])
-    file_path = sys.argv[2]
-
     FR = FileReader()
 
     J = Jewel(8000, './', FR)
